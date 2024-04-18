@@ -4,7 +4,7 @@ body {
   padding-top: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 ul,
@@ -26,7 +26,6 @@ ol {
   padding: 88px 80px 40px 80px;
   box-sizing: border-box;
 }
-
 
 /* Sidebar */
 .sidebar {
@@ -151,7 +150,6 @@ ol {
 
 .my-projects-list {
   padding-left: 16px;
-
 }
 
 .my-project-item-link {
@@ -256,4 +254,64 @@ ol {
   font-weight: 700;
   font-size: 14px;
   color: #000;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .main-content {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .my-photo {
+    width: 250px;
+  }
+
+  .sidebar-content {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .my-photo {
+    width: 200px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .my-name {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .my-photo {
+    width: 100%;
+  }
 }
