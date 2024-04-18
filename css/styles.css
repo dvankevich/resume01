@@ -7,6 +7,14 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* try fix "This element is causing an element to overflow" in Firefox inspector 
+https: //stackoverflow.com/questions/70556531/this-element-is-causing-an-element-to-overflow-in-firefox
+*/
+/*
+html {
+  width: 100%;
+}
+ */
 ul,
 ol {
   margin-top: 0;
@@ -19,6 +27,8 @@ ol {
   flex-direction: row-reverse;
   width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
+  word-break: break-word;
 }
 
 /* Main content */
@@ -261,12 +271,20 @@ ol {
     padding: 20px 20px 20px 20px;
   }
 
+  .wrapper {
+    width: 100%;
+  }
+
   .main-content {
     padding: 40px;
   }
 }
 
 @media screen and (max-width: 800px) {
+  .wrapper {
+    width: 100%;
+  }
+
   .sidebar {
     width: 250px;
   }
@@ -283,6 +301,10 @@ ol {
 @media screen and (max-width: 600px) {
   body {
     padding: 0;
+  }
+
+  .wrapper {
+    width: 100%;
   }
 
   .sidebar {
@@ -305,6 +327,7 @@ ol {
 @media screen and (max-width: 510px) {
   .wrapper {
     flex-direction: column;
+    width: 100%;
   }
 
   .sidebar {
